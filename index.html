@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#ffe28a">
-<meta name="description" content="Cravory Cookies in Ormoc City. Six classic flavors and a new limited-edition cookie every Sunday.">
+<meta name="description" content="Cravory Cookies in Ormoc City. Enjoy six signature cookie flavors and our Box of 4 assorted cookies for only ₱195.">
 <title>Cravory | There's Always Something to Crave</title>
 
 <style>
@@ -165,16 +165,17 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
 .home-copy p{max-width:480px;margin-bottom:24px;color:#694a2b;font-size:15px}
 .home-actions{display:flex;gap:10px;flex-wrap:wrap}
 
-/* HOMEPAGE PHOTO FRAME */
+/* HOMEPAGE PROMOTIONAL BANNER */
 .home-visual{
   min-height:390px;
   border:8px solid var(--paper);
   outline:2px solid rgba(96,59,32,.30);
   border-radius:34px;
-  background:var(--cream);
-  display:grid;
-  place-items:center;
-  padding:20px;
+  background:var(--brown);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
   text-align:center;
   position:relative;
   isolation:isolate;
@@ -182,42 +183,96 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   box-shadow:0 16px 32px rgba(63,40,25,.16);
 }
 
-.home-visual > img{
-  position:absolute;
-  z-index:0;
-  inset:10px;
-  width:calc(100% - 20px);
-  height:calc(100% - 20px);
-  object-fit:contain;
-  object-position:center;
-  border-radius:20px;
+.sale-banner{
+  position:relative;
+  width:100%;
+  min-height:320px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:25px 15px;
+  color:var(--brown);
+  background:var(--butter);
+  border:2px dashed rgba(96,59,32,.55);
+  border-radius:23px;
+  overflow:hidden;
 }
 
-.home-sticker{
+.sale-banner:before,
+.sale-banner:after{
+  content:"";
   position:absolute;
-  z-index:5;
-  right:12px;
-  bottom:12px;
-  display:grid;
-  place-items:center;
-  width:112px;
-  height:112px;
+  width:125px;
+  height:125px;
+  border:2px solid rgba(96,59,32,.12);
   border-radius:50%;
-  padding:13px;
-  color:var(--butter);
-  background:var(--brown);
-  text-align:center;
-  font-size:10px;
-  line-height:1.4;
-  font-weight:900;
-  transform:rotate(9deg);
-  box-shadow:0 5px 15px rgba(63,40,25,.2);
 }
 
-.photo-placeholder{display:grid;place-items:center;gap:8px;text-align:center;color:#9c8057}
-.cookie-icon{font-size:48px}
-.photo-placeholder strong{font-size:9px;letter-spacing:2px;text-transform:uppercase}
-.photo-placeholder small{font-size:11px;color:var(--muted)}
+.sale-banner:before{top:-65px;left:-50px}
+.sale-banner:after{bottom:-65px;right:-50px}
+
+.sale-top{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:50px;
+  background:var(--brown);
+  color:var(--butter);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+  transform:rotate(-3deg);
+}
+
+.sale-banner h2{
+  position:relative;
+  margin:17px 0 0;
+  color:var(--brown);
+  font-family:"Trebuchet MS",Arial,sans-serif;
+  font-size:clamp(30px,4vw,48px);
+  font-weight:1000;
+  letter-spacing:-2px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.sale-four{
+  margin:5px 0;
+  color:var(--brown);
+  font-size:clamp(95px,13vw,155px);
+  font-weight:1000;
+  letter-spacing:-9px;
+  line-height:1;
+  text-shadow:4px 5px 0 rgba(96,59,32,.13);
+}
+
+.sale-banner h3{
+  margin:0;
+  padding:9px 19px;
+  border-radius:9px;
+  background:var(--brown);
+  color:var(--butter);
+  font-size:clamp(21px,3vw,33px);
+  font-weight:1000;
+  letter-spacing:1px;
+}
+
+.sale-description{
+  margin:15px 0 0;
+  color:#694a2b;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+.sale-bottom{
+  margin-top:18px;
+  color:var(--brown);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:2px;
+}
 
 /* MENU */
 .page-heading{
@@ -249,7 +304,6 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   box-shadow:0 5px 18px rgba(63,40,25,.04);
 }
 
-/* MENU PHOTOS */
 .product-photo{
   height:190px;
   min-height:190px;
@@ -314,8 +368,8 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   font-weight:900;
 }
 
-.assorted-card{border:1px dashed rgba(96,59,32,.38);background:var(--butter)}
-.assorted-card .product-photo{background:rgba(255,255,255,.38)}
+.assorted-card{border:2px solid var(--brown);background:var(--butter)}
+.assorted-card .product-photo{background:rgba(255,255,255,.45)}
 
 .section-chip{
   display:inline-flex;
@@ -330,69 +384,7 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   text-transform:uppercase;
 }
 
-/* SUNDAY DROP AND OUR STORY */
-.drop-view{background:var(--brown);color:var(--cream)}
-
-.drop-layout{
-  min-height:100%;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:35px;
-  align-items:center;
-}
-
-/* SUNDAY DROP / OUR STORY PHOTO FRAME */
-.drop-photo{
-  height:clamp(300px,38vw,420px);
-  min-height:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px;
-  overflow:hidden;
-  border:8px solid var(--butter);
-  border-radius:30px;
-  background:var(--cream);
-  color:var(--brown);
-  box-shadow:0 16px 32px rgba(0,0,0,.20);
-}
-
-.drop-photo img{
-  display:block;
-  width:100%;
-  height:100%;
-  max-height:100%;
-  object-fit:contain;
-  object-position:center;
-  border-radius:16px;
-}
-
-.drop-copy h2{color:var(--butter);font-size:clamp(42px,5vw,66px);line-height:.95}
-.drop-copy p{max-width:480px;color:rgba(255,249,233,.78);font-size:13px;line-height:1.6}
-
-.drop-tag{
-  display:inline-block;
-  margin:4px 0 18px;
-  padding:8px 12px;
-  border:1px solid rgba(255,226,138,.5);
-  border-radius:50px;
-  color:var(--butter);
-  font-size:9px;
-  font-weight:900;
-}
-
-.drop-price{margin:10px 0 14px;color:var(--butter);font-weight:900;font-size:13px;line-height:1.8}
-.drop-order-row{display:flex;gap:9px;align-items:center}
-
-.drop-order-row select{
-  flex:1;
-  border:1px solid rgba(255,226,138,.5);
-  border-radius:10px;
-  padding:11px;
-  background:var(--dark);
-  color:var(--cream);
-  font-size:11px;
-}
+.assorted-card .section-chip{background:var(--brown);color:var(--butter)}
 
 /* CART */
 .cart-empty{
@@ -627,32 +619,23 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   .nav-tabs.open{display:flex;flex-wrap:wrap}
   .nav-tab{font-size:10px;padding:9px}
   .view{padding:19px 14px}
-  .home-grid,.drop-layout{grid-template-columns:1fr;gap:18px}
+  .home-grid{grid-template-columns:1fr;gap:18px}
   .home-copy h1{font-size:clamp(43px,13vw,68px)}
 
   .home-visual{
-    min-height:240px;
+    min-height:290px;
     border-width:6px;
     outline-width:1px;
     border-radius:25px;
     padding:12px;
   }
 
-  .home-visual > img{
-    inset:8px;
-    width:calc(100% - 16px);
-    height:calc(100% - 16px);
-    border-radius:16px;
-  }
-
-  .home-sticker{
-    width:78px;
-    height:78px;
-    right:7px;
-    bottom:7px;
-    padding:9px;
-    font-size:8px;
-  }
+  .sale-banner{min-height:250px;padding:18px 10px}
+  .sale-banner h2{font-size:35px}
+  .sale-four{font-size:100px}
+  .sale-banner h3{font-size:24px}
+  .sale-description{font-size:9px}
+  .sale-bottom{font-size:8px}
 
   .page-heading{display:block}
   .page-heading p{margin-top:9px}
@@ -670,16 +653,6 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   .product-actions{flex-direction:column;align-items:stretch}
   .add-button{width:100%}
 
-  .drop-photo{
-    height:250px;
-    min-height:0;
-    padding:10px;
-    border-width:6px;
-    border-radius:23px;
-  }
-
-  .drop-photo img{height:100%;max-height:100%;border-radius:13px}
-  .drop-order-row{flex-wrap:wrap}
   .cart-line{grid-template-columns:1fr auto;gap:8px}
   .line-price{grid-column:1/-1;text-align:left}
   .qty-control{grid-column:2;grid-row:1}
@@ -694,7 +667,7 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
 <body>
 <div class="site-shell">
 
-<div class="announcement">Six classics. One new craving every Sunday.</div>
+<div class="announcement">Freshly baked happiness · Box of 4 for only ₱195!</div>
 
 <header class="site-header">
   <a class="brand" href="#home" data-view-link="home">
@@ -706,7 +679,6 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
   <nav class="nav-tabs" id="navTabs">
     <button class="nav-tab active" data-view="home">Home</button>
     <button class="nav-tab" data-view="menu">Menu & Prices</button>
-    <button class="nav-tab" data-view="drop">Sunday Drop</button>
     <button class="nav-tab" data-view="about">Our Story</button>
     <button class="nav-tab cart-tab" data-view="cart">Cart <span class="cart-count" id="cartCount">0</span></button>
     <button class="nav-tab" data-view="order">Order Form</button>
@@ -716,25 +688,42 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
 
 <main class="main-area">
 
+<!-- HOME -->
 <section class="view home-view active" id="view-home">
   <div class="view-inner home-grid">
+
     <div class="home-copy">
       <span class="eyebrow">Freshly baked · Made to crave</span>
       <h1>There's always something to crave.</h1>
-      <p>Six familiar favorites to keep close, plus one adventurous limited-edition cookie every Sunday. Pick your craving, build your box, and send your order through Messenger.</p>
+      <p>From familiar favorites to irresistible cookie combinations, Cravory brings you freshly baked treats made to satisfy every craving. Pick your favorites, build your box, and make every bite count!</p>
+
       <div class="home-actions">
         <button class="btn" data-view="menu">Explore the Menu ↗</button>
-        <button class="btn secondary" data-view="drop">See the Sunday Drop</button>
+        <button class="btn secondary" data-view="about">Get to Know Us</button>
       </div>
     </div>
 
+    <!-- PROMOTIONAL SALE BANNER -->
     <div class="home-visual">
-      <img src="sunday_drop-removebg-preview.png" alt="Cravory's Six Classic Cookie Flavors">
-      <div class="home-sticker">BAKED WITH<br>A LITTLE<br>EXTRA LOVE</div>
+      <div class="sale-banner">
+        <span class="sale-top">A DEAL WORTH CRAVING!</span>
+
+        <h2>BOX OF</h2>
+
+        <div class="sale-four">4</div>
+
+        <h3>ONLY ₱195!</h3>
+
+        <p class="sale-description">4 Delicious Cookies · One Sweet Deal</p>
+
+        <div class="sale-bottom">MIX. MATCH. ENJOY.</div>
+      </div>
     </div>
+
   </div>
 </section>
 
+<!-- MENU -->
 <section class="view" id="view-menu">
   <div class="view-inner">
     <div class="page-heading">
@@ -744,37 +733,14 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
       </div>
       <p>Choose a flavor and format. Prices are in Philippine pesos. Add each item to your cart.</p>
     </div>
+
     <div class="menu-layout" id="classicsGrid"></div>
-    <p class="order-note">Assorted boxes combine flavors. Limited-edition prices vary depending on ingredients.</p>
+
+    <p class="order-note">Our assorted Box of 4 is available for ₱195. Assorted boxes combine flavors, so remember to specify your choices in the order instructions.</p>
   </div>
 </section>
 
-<section class="view drop-view" id="view-drop">
-  <div class="view-inner drop-layout">
-    <div class="drop-photo">
-      <img src="sunday_drop-removebg-preview.png" alt="This week's Sunday Drop cookie">
-    </div>
-
-    <div class="drop-copy">
-      <span class="eyebrow">A new surprise every week</span>
-      <h2>The Sunday<br>Weekly Drop.</h2>
-      <p id="weeklyDescription">One highly experimental, limited-edition flavor is released exclusively every Sunday.</p>
-      <span class="drop-tag">NEW FLAVOR · EVERY SUNDAY · LIMITED STOCK</span>
-      <p><strong id="weeklyFlavorName">This Sunday's Limited Edition</strong><br>Final prices and availability will be confirmed by Cravory.</p>
-      <div class="drop-price">Individual ₱60–₱75<br>Box of 4 ₱230–₱285<br>Box of 6 ₱330–₱415</div>
-
-      <div class="drop-order-row">
-        <select id="dropFormat">
-          <option value="individual">Individual</option>
-          <option value="box4">Box of 4</option>
-          <option value="box6">Box of 6</option>
-        </select>
-        <button class="btn light" id="addDropButton">Add to Cart +</button>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- CART -->
 <section class="view" id="view-cart">
   <div class="view-inner">
     <div class="page-heading">
@@ -784,10 +750,12 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
       </div>
       <p>Adjust quantities or remove items before ordering.</p>
     </div>
+
     <div id="cartContents"></div>
   </div>
 </section>
 
+<!-- ORDER FORM -->
 <section class="view" id="view-order">
   <div class="view-inner">
     <div class="page-heading">
@@ -848,31 +816,47 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
       <aside class="order-summary-card">
         <h3>Your Order Summary</h3>
         <div class="summary-items" id="orderSummaryItems"></div>
-        <div class="summary-total"><span>Estimated Cookie Total</span><strong id="orderSummaryTotal">₱0</strong></div>
-        <p class="order-note">Limited-edition prices depend on ingredients.</p>
+
+        <div class="summary-total">
+          <span>Estimated Cookie Total</span>
+          <strong id="orderSummaryTotal">₱0</strong>
+        </div>
+
+        <p class="order-note">Delivery fees are not included.</p>
+
         <div class="messenger-note">Your order details will be copied. Open Messenger, paste the message, and press Send.</div>
+
         <button class="btn secondary" data-view="cart" style="width:100%;margin-top:12px">Edit Cart</button>
       </aside>
     </div>
   </div>
 </section>
 
+<!-- ABOUT US -->
 <section class="view" id="view-about">
-  <div class="view-inner drop-layout">
-    <div class="drop-photo" style="background:var(--butter);color:var(--brown)">
-      <img src="Six_classics.-removebg-preview.png" alt="Cravory's Six Classic Cookie Flavors">
+  <div class="view-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;min-height:100%">
+
+    <div class="drop-photo" style="height:clamp(300px,38vw,420px);display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden;border:8px solid var(--butter);border-radius:30px;background:var(--cream);box-shadow:0 16px 32px rgba(0,0,0,.12)">
+      <img src="Six_classics.-removebg-preview.png" alt="Cravory's Six Classic Cookie Flavors" style="display:block;width:100%;height:100%;object-fit:contain;object-position:center;border-radius:16px">
     </div>
 
-    <div class="drop-copy" style="color:var(--dark)">
+    <div>
       <span class="eyebrow">A little about us</span>
-      <h2 style="color:var(--brown)">Six classics.<br>New surprises.</h2>
-      <p style="color:var(--muted)">Cravory is a home-based cookie business serving customers in Ormoc City. We keep six familiar flavors available while making room for one experimental, limited-edition cookie every Sunday.</p>
-      <p style="color:var(--muted)">Whether you are choosing a favorite, building an assorted box, or trying the latest Sunday Drop, there's always something to crave.</p>
+      <h2 style="font-size:clamp(42px,5vw,66px);line-height:.95;margin:12px 0 20px">Good cookies.<br>Great cravings.</h2>
+
+      <p style="color:var(--muted);font-size:13px;line-height:1.7">Cravory is a home-based cookie business serving customers in Ormoc City. We believe that good cookies can turn ordinary moments into something special.</p>
+
+      <p style="color:var(--muted);font-size:13px;line-height:1.7">Our menu features six signature flavors, each made to satisfy different cravings. Whether you love classic chocolate chip, rich double chocolate, or our flavorful Biscoff and S'mores cookies, there's a treat waiting for you.</p>
+
+      <p style="color:var(--muted);font-size:13px;line-height:1.7">You can also enjoy our assorted cookie boxes and mix your favorite flavors in one delicious box!</p>
+
       <button class="btn" data-view="menu">Explore the Menu ↗</button>
     </div>
+
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="view" id="view-contact">
   <div class="view-inner">
     <div class="page-heading">
@@ -880,10 +864,11 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
         <span class="eyebrow">Say hello to Cravory</span>
         <h2>Let's talk cookies.</h2>
       </div>
-      <p>Follow our pages for flavor announcements, videos, customer features, and Sunday Drop updates.</p>
+      <p>Follow our pages for product announcements, photos, videos, and updates.</p>
     </div>
 
     <div class="contact-grid">
+
       <article class="contact-card">
         <span class="section-chip">Facebook</span>
         <h3 style="margin-top:13px">Cravory on Facebook</h3>
@@ -904,6 +889,7 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
         <p>Behind-the-scenes baking and product videos.</p>
         <a data-social="tiktok" href="https://www.tiktok.com/@cravory.cookies" target="_blank" rel="noopener noreferrer">Visit TikTok ↗</a>
       </article>
+
     </div>
 
     <div class="contact-card" style="margin-top:14px">
@@ -912,6 +898,7 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
       <p>Pickup is available at the designated location. Delivery is subject to service coverage and confirmation.</p>
       <button class="btn" data-view="order">Start an Order ↗</button>
     </div>
+
   </div>
 </section>
 
@@ -919,12 +906,14 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
 
 <footer class="footer-bar">
   <span>© <span id="year"></span> Cravory · There's Always Something to Crave.</span>
+
   <div class="footer-socials">
     <a data-social="facebook" href="https://www.facebook.com/cravory.cookies" target="_blank" rel="noopener noreferrer">Facebook</a>
     <a data-social="instagram" href="https://www.instagram.com/cravory.cookies/" target="_blank" rel="noopener noreferrer">Instagram</a>
     <a data-social="tiktok" href="https://www.tiktok.com/@cravory.cookies" target="_blank" rel="noopener noreferrer">TikTok</a>
   </div>
 </footer>
+
 </div>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -934,6 +923,7 @@ h1,h2{color:var(--brown);font-family:Georgia,serif;letter-spacing:-2px}
     <h3>Your Order Message Is Ready</h3>
     <p id="modalMessage">Copy your order details and send them to Cravory through Messenger.</p>
     <textarea id="messageText" readonly></textarea>
+
     <div class="modal-actions">
       <button class="btn secondary" id="closeModal">Close</button>
       <button class="btn" id="sendMessengerButton">Copy & Open Messenger ↗</button>
@@ -947,9 +937,7 @@ const CONFIG = {
   messengerUrl: "https://m.me/YOUR_CRAVORY_PAGE_USERNAME",
   facebookUrl: "https://www.facebook.com/cravory.cookies",
   instagramUrl: "https://www.instagram.com/cravory.cookies/",
-  tiktokUrl: "https://www.tiktok.com/@cravory.cookies",
-  weeklyFlavorName: "This Sunday's Limited Edition",
-  weeklyFlavorDescription: "One experimental limited-edition flavor released exclusively every Sunday."
+  tiktokUrl: "https://www.tiktok.com/@cravory.cookies"
 };
 
 /* PRODUCT PRICES */
@@ -960,18 +948,17 @@ const PRODUCTS = [
   {id:"red-velvet-cream-cheese",name:"Red Velvet Cream Cheese",desc:"Red velvet with a creamy cheesecake-style center.",prices:{individual:55,box4:210,box6:305}},
   {id:"biscoff-stuffed",name:"Biscoff Stuffed",desc:"A cookie with a spiced Biscoff center.",prices:{individual:60,box4:230,box6:330}},
   {id:"smores",name:"S'mores",desc:"A sweet mix inspired by the campfire favorite.",prices:{individual:60,box4:230,box6:330}},
-  {id:"limited-edition",name:"Sunday Limited Edition",desc:"A new experimental flavor released every Sunday.",prices:{individual:[60,75],box4:[230,285],box6:[330,415]}},
-  {id:"assorted",name:"Assorted Box",desc:"A mix of Cravory flavors. Specify your choices in the instructions.",prices:{box4:195,box6:295}}
+  {id:"assorted",name:"Assorted Cookie Box",desc:"A mix of four delicious Cravory flavors. Specify your choices in the instructions.",prices:{box4:195,box6:295}}
 ];
 
 /* PRODUCT PHOTOS */
 const PRODUCT_IMAGES = {
-  "classic-choco-chip": "classic_choco_chip-removebg-preview.png",
-  "double-choco": "double_choco-removebg-preview.png",
-  "matcha-white-chocolate": "Matcha_White_Chocolate-removebg-preview.png",
-  "red-velvet-cream-cheese": "Red_Velvet_Cream_Cheese-removebg-preview.png",
-  "biscoff-stuffed": "Biscoff_Stuffed-removebg-preview.png",
-  "smores": "S_mores-removebg-preview.png"
+  "classic-choco-chip":"classic_choco_chip-removebg-preview.png",
+  "double-choco":"double_choco-removebg-preview.png",
+  "matcha-white-chocolate":"Matcha_White_Chocolate-removebg-preview.png",
+  "red-velvet-cream-cheese":"Red_Velvet_Cream_Cheese-removebg-preview.png",
+  "biscoff-stuffed":"Biscoff_Stuffed-removebg-preview.png",
+  "smores":"S_mores-removebg-preview.png"
 };
 
 const FORMATS = {
@@ -980,12 +967,12 @@ const FORMATS = {
   box6:{label:"Box of 6"}
 };
 
-let cart = [];
-let latestOrderMessage = "";
+let cart=[];
+let latestOrderMessage="";
 
-const nameInput = document.getElementById("customerName");
-const phoneInput = document.getElementById("customerPhone");
-const emailInput = document.getElementById("customerEmail");
+const nameInput=document.getElementById("customerName");
+const phoneInput=document.getElementById("customerPhone");
+const emailInput=document.getElementById("customerEmail");
 
 /* INPUT VALIDATION */
 nameInput.addEventListener("input",function(){
@@ -1010,30 +997,44 @@ phoneInput.addEventListener("change",function(){
   this.setCustomValidity(pattern.test(this.value)?"":"Please enter a contact number containing 7 to 15 digits only.");
 });
 
-emailInput.addEventListener("input",function(){this.setCustomValidity("");});
+emailInput.addEventListener("input",function(){
+  this.setCustomValidity("");
+});
 
 /* PRICE HELPERS */
 const peso=value=>"₱"+Number(value).toLocaleString("en-PH");
-const priceText=price=>Array.isArray(price)?`${peso(price[0])}–${peso(price[1])}`:peso(price);
+
+const priceText=price=>
+  Array.isArray(price)?`${peso(price[0])}–${peso(price[1])}`:peso(price);
+
 const getProduct=id=>PRODUCTS.find(product=>product.id===id);
+
 const getPrice=(productId,format)=>getProduct(productId).prices[format];
+
 const formatLabel=format=>FORMATS[format].label;
-const rangeTotal=(price,qty)=>Array.isArray(price)?[price[0]*qty,price[1]*qty]:[price*qty,price*qty];
+
+const rangeTotal=(price,qty)=>
+  Array.isArray(price)?[price[0]*qty,price[1]*qty]:[price*qty,price*qty];
 
 const totalRange=()=>cart.reduce((sum,item)=>{
   const line=rangeTotal(item.price,item.qty);
   return [sum[0]+line[0],sum[1]+line[1]];
 },[0,0]);
 
-const displayTotal=range=>range[0]===range[1]?peso(range[0]):`${peso(range[0])}–${peso(range[1])}`;
+const displayTotal=range=>
+  range[0]===range[1]?peso(range[0]):`${peso(range[0])}–${peso(range[1])}`;
 
 /* TOAST */
 function showToast(message){
   const toast=document.getElementById("toast");
   toast.textContent=message;
   toast.classList.add("show");
+
   clearTimeout(showToast.timer);
-  showToast.timer=setTimeout(()=>toast.classList.remove("show"),1900);
+
+  showToast.timer=setTimeout(()=>{
+    toast.classList.remove("show");
+  },1900);
 }
 
 /* NAVIGATION */
@@ -1056,24 +1057,32 @@ function showView(name){
 /* PRODUCT CARDS */
 function renderProductCards(){
   const grid=document.getElementById("classicsGrid");
-  const classics=PRODUCTS.filter(product=>!["limited-edition","assorted"].includes(product.id));
+
+  const classics=PRODUCTS.filter(product=>product.id!=="assorted");
 
   const cards=classics.map(product=>`
     <article class="product-card">
       <div class="product-photo">
         <img src="${PRODUCT_IMAGES[product.id]}" alt="${product.name}">
       </div>
+
       <div class="product-info">
         <span class="section-chip">Permanent Classic</span>
         <h3>${product.name}</h3>
         <p>${product.desc}</p>
-        <label class="price-preview">Choose format · <span data-price-for="${product.id}">${priceText(product.prices.individual)}</span></label>
+
+        <label class="price-preview">
+          Choose format ·
+          <span data-price-for="${product.id}">${priceText(product.prices.individual)}</span>
+        </label>
+
         <div class="product-actions">
           <select class="format-select" data-format-for="${product.id}">
             <option value="individual">Individual</option>
             <option value="box4">Box of 4</option>
             <option value="box6">Box of 6</option>
           </select>
+
           <button class="add-button" data-add="${product.id}">Add +</button>
         </div>
       </div>
@@ -1085,16 +1094,25 @@ function renderProductCards(){
       <div class="product-photo">
         <img src="Gemini_Generated_Image_6108p06108p06108-removebg-preview.png" alt="Cravory Assorted Cookie Box">
       </div>
+
       <div class="product-info">
-        <span class="section-chip">Mix & Match</span>
+        <span class="section-chip">BEST VALUE · MIX & MATCH</span>
+
         <h3>Assorted Cookie Box</h3>
-        <p>Choose a mix of flavors. Write your selections in the instructions.</p>
-        <label class="price-preview">Choose box · <span data-price-for="assorted">₱195</span></label>
+
+        <p>Four delicious cookies in one box! Choose a mix of your favorite Cravory flavors.</p>
+
+        <label class="price-preview">
+          Choose box ·
+          <span data-price-for="assorted">₱195</span>
+        </label>
+
         <div class="product-actions">
           <select data-format-for="assorted" class="format-select">
-            <option value="box4">Box of 4</option>
-            <option value="box6">Box of 6</option>
+            <option value="box4">Box of 4 · ₱195</option>
+            <option value="box6">Box of 6 · ₱295</option>
           </select>
+
           <button class="add-button" data-add="assorted">Add +</button>
         </div>
       </div>
@@ -1105,14 +1123,21 @@ function renderProductCards(){
   grid.querySelectorAll("[data-format-for]").forEach(select=>{
     select.addEventListener("change",()=>{
       const price=getPrice(select.dataset.formatFor,select.value);
-      grid.querySelector(`[data-price-for="${select.dataset.formatFor}"]`).textContent=priceText(price);
+
+      grid.querySelector(
+        `[data-price-for="${select.dataset.formatFor}"]`
+      ).textContent=priceText(price);
     });
   });
 
   grid.querySelectorAll("[data-add]").forEach(button=>{
     button.addEventListener("click",()=>{
       const id=button.dataset.add;
-      const format=grid.querySelector(`[data-format-for="${id}"]`).value;
+
+      const format=grid.querySelector(
+        `[data-format-for="${id}"]`
+      ).value;
+
       addToCart(id,format);
     });
   });
@@ -1123,26 +1148,42 @@ function addToCart(productId,format){
   const product=getProduct(productId);
   const price=getPrice(productId,format);
   const key=`${productId}:${format}`;
+
   const existing=cart.find(item=>item.key===key);
 
   if(existing)existing.qty++;
-  else cart.push({key,productId,name:product.name,format,price,qty:1});
+  else cart.push({
+    key,
+    productId,
+    name:product.name,
+    format,
+    price,
+    qty:1
+  });
 
   updateCartCount();
   renderCart();
   renderOrderSummary();
+
   showToast(`${product.name} added to cart`);
 }
 
 function updateCartCount(){
-  document.getElementById("cartCount").textContent=cart.reduce((sum,item)=>sum+item.qty,0);
+  document.getElementById("cartCount").textContent=
+    cart.reduce((sum,item)=>sum+item.qty,0);
 }
 
 function changeQty(key,delta){
   const item=cart.find(entry=>entry.key===key);
+
   if(!item)return;
+
   item.qty+=delta;
-  if(item.qty<=0)cart=cart.filter(entry=>entry.key!==key);
+
+  if(item.qty<=0){
+    cart=cart.filter(entry=>entry.key!==key);
+  }
+
   updateCartCount();
   renderCart();
   renderOrderSummary();
@@ -1150,13 +1191,16 @@ function changeQty(key,delta){
 
 function removeItem(key){
   cart=cart.filter(item=>item.key!==key);
+
   updateCartCount();
   renderCart();
   renderOrderSummary();
 }
 
 function lineDescription(item){
-  return item.productId==="assorted"?`Assorted ${formatLabel(item.format)}`:`${item.name} · ${formatLabel(item.format)}`;
+  return item.productId==="assorted"
+    ?`Assorted ${formatLabel(item.format)}`
+    :`${item.name} · ${formatLabel(item.format)}`;
 }
 
 function renderCart(){
@@ -1169,7 +1213,11 @@ function renderCart(){
         <strong>Your cart is waiting for a craving.</strong>
         <button class="btn" data-view="menu">Browse the Menu</button>
       </div>`;
-    holder.querySelector("[data-view]").addEventListener("click",()=>showView("menu"));
+
+    holder.querySelector("[data-view]").addEventListener("click",()=>{
+      showView("menu");
+    });
+
     return;
   }
 
@@ -1177,6 +1225,7 @@ function renderCart(){
     <div class="cart-list">
       ${cart.map(item=>{
         const line=rangeTotal(item.price,item.qty);
+
         return `
           <div class="cart-line">
             <div>
@@ -1184,33 +1233,46 @@ function renderCart(){
               <p>${formatLabel(item.format)}</p>
               <button class="remove-button" data-remove="${item.key}">Remove</button>
             </div>
+
             <div class="qty-control">
               <button data-qty="${item.key}" data-delta="-1">−</button>
               <strong>${item.qty}</strong>
               <button data-qty="${item.key}" data-delta="1">+</button>
             </div>
+
             <div class="line-price">${displayTotal(line)}</div>
           </div>`;
       }).join("")}
     </div>
+
     <div class="cart-bottom">
       <div>
         <small>Estimated Cookie Total</small>
         <div class="cart-total">${displayTotal(totalRange())}</div>
         <small>Delivery fee not included.</small>
       </div>
+
       <button class="btn" id="checkoutButton">Continue to Order Form →</button>
     </div>`;
 
   holder.querySelectorAll("[data-qty]").forEach(button=>{
-    button.addEventListener("click",()=>changeQty(button.dataset.qty,Number(button.dataset.delta)));
+    button.addEventListener("click",()=>{
+      changeQty(
+        button.dataset.qty,
+        Number(button.dataset.delta)
+      );
+    });
   });
 
   holder.querySelectorAll("[data-remove]").forEach(button=>{
-    button.addEventListener("click",()=>removeItem(button.dataset.remove));
+    button.addEventListener("click",()=>{
+      removeItem(button.dataset.remove);
+    });
   });
 
-  holder.querySelector("#checkoutButton").addEventListener("click",()=>showView("order"));
+  holder.querySelector("#checkoutButton").addEventListener("click",()=>{
+    showView("order");
+  });
 }
 
 /* ORDER SUMMARY */
@@ -1218,26 +1280,40 @@ function renderOrderSummary(){
   const holder=document.getElementById("orderSummaryItems");
 
   if(!cart.length){
-    holder.innerHTML=`<p style="color:var(--muted);font-size:11px">Your cart is empty. Add cookies from the Menu first.</p>`;
+    holder.innerHTML=`
+      <p style="color:var(--muted);font-size:11px">
+        Your cart is empty. Add cookies from the Menu first.
+      </p>`;
+
     document.getElementById("orderSummaryTotal").textContent="₱0";
     return;
   }
 
   holder.innerHTML=cart.map(item=>{
     const total=rangeTotal(item.price,item.qty);
-    return `<div class="summary-item"><span>${item.qty} × ${lineDescription(item)}</span><strong>${displayTotal(total)}</strong></div>`;
+
+    return `
+      <div class="summary-item">
+        <span>${item.qty} × ${lineDescription(item)}</span>
+        <strong>${displayTotal(total)}</strong>
+      </div>`;
   }).join("");
 
-  document.getElementById("orderSummaryTotal").textContent=displayTotal(totalRange());
+  document.getElementById("orderSummaryTotal").textContent=
+    displayTotal(totalRange());
 }
 
 /* DELIVERY */
 function updateAddressRequirement(){
-  const delivery=document.getElementById("fulfillment").value==="Delivery";
+  const delivery=
+    document.getElementById("fulfillment").value==="Delivery";
+
   const field=document.getElementById("addressField");
   const address=document.getElementById("deliveryAddress");
+
   field.hidden=!delivery;
   address.required=delivery;
+
   if(!delivery)address.value="";
 }
 
@@ -1246,26 +1322,39 @@ function buildOrderMessage(){
   const name=nameInput.value.trim();
   const phone=phoneInput.value.trim();
   const email=emailInput.value.trim();
+
   const fulfillment=document.getElementById("fulfillment").value;
   const address=document.getElementById("deliveryAddress").value.trim();
-  const instructions=document.getElementById("instructions").value.trim()||"None";
+
+  const instructions=
+    document.getElementById("instructions").value.trim()||"None";
 
   const lines=cart.map(item=>{
     const line=rangeTotal(item.price,item.qty);
+
     return `• ${item.qty} × ${lineDescription(item)} — ${displayTotal(line)}`;
   });
 
   return [
-    "CRAVORY — ORDER REQUEST","",
+    "CRAVORY — ORDER REQUEST",
+    "",
     `Customer Name: ${name}`,
     `Contact Number: ${phone}`,
     `Email Address: ${email}`,
     `Fulfillment: ${fulfillment}`,
-    ...(fulfillment==="Delivery"?[`Delivery Address: ${address}`]:[]),
-    "","ORDER DETAILS:",...lines,"",
+
+    ...(fulfillment==="Delivery"
+      ?[`Delivery Address: ${address}`]
+      :[]),
+
+    "",
+    "ORDER DETAILS:",
+    ...lines,
+    "",
     `Estimated Cookie Total: ${displayTotal(totalRange())}`,
     "Delivery Fee: To be confirmed.",
-    `Additional Instructions: ${instructions}`,"",
+    `Additional Instructions: ${instructions}`,
+    "",
     "Please confirm flavor availability, delivery arrangements, and the final price. Thank you!"
   ].join("\n");
 }
@@ -1280,18 +1369,24 @@ async function copyText(text){
   }catch(error){}
 
   const textarea=document.getElementById("messageText");
+
   textarea.value=text;
   textarea.focus();
   textarea.select();
 
-  try{return document.execCommand("copy");}
-  catch(error){return false;}
+  try{
+    return document.execCommand("copy");
+  }catch(error){
+    return false;
+  }
 }
 
 function openOrderModal(message,note){
   latestOrderMessage=message;
+
   document.getElementById("messageText").value=message;
   document.getElementById("modalMessage").textContent=note;
+
   document.getElementById("orderModal").classList.add("open");
 }
 
@@ -1306,6 +1401,7 @@ document.getElementById("orderForm").addEventListener("submit",async event=>{
   }
 
   const form=event.currentTarget;
+
   if(!form.reportValidity())return;
 
   const message=buildOrderMessage();
@@ -1316,6 +1412,7 @@ document.getElementById("orderForm").addEventListener("submit",async event=>{
     :"Copy the order details below and paste them into Cravory's Messenger chat.";
 
   openOrderModal(message,note);
+
   if(copied)showToast("Order details copied");
 });
 
@@ -1328,11 +1425,15 @@ document.getElementById("sendMessengerButton").addEventListener("click",async()=
     return;
   }
 
-  const messengerConfigured=CONFIG.messengerUrl&&!CONFIG.messengerUrl.includes("YOUR_");
+  const messengerConfigured=
+    CONFIG.messengerUrl&&
+    !CONFIG.messengerUrl.includes("YOUR_");
 
   if(messengerConfigured){
     window.open(CONFIG.messengerUrl,"_blank","noopener,noreferrer");
+
     document.getElementById("orderModal").classList.remove("open");
+
     showToast("Paste your order into Messenger!");
   }else{
     showToast("Add your real Messenger link in CONFIG first.");
@@ -1345,24 +1446,27 @@ document.getElementById("closeModal").addEventListener("click",()=>{
 });
 
 document.getElementById("orderModal").addEventListener("click",event=>{
-  if(event.target.id==="orderModal")event.currentTarget.classList.remove("open");
+  if(event.target.id==="orderModal"){
+    event.currentTarget.classList.remove("open");
+  }
 });
 
 /* EVENT LISTENERS */
 document.getElementById("fulfillment").addEventListener("change",updateAddressRequirement);
 
-document.getElementById("addDropButton").addEventListener("click",()=>{
-  addToCart("limited-edition",document.getElementById("dropFormat").value);
-});
-
 document.getElementById("mobileMenuButton").addEventListener("click",()=>{
   const nav=document.getElementById("navTabs");
+
   nav.classList.toggle("open");
-  document.getElementById("mobileMenuButton").textContent=nav.classList.contains("open")?"×":"☰";
+
+  document.getElementById("mobileMenuButton").textContent=
+    nav.classList.contains("open")?"×":"☰";
 });
 
 document.querySelectorAll("[data-view]").forEach(button=>{
-  button.addEventListener("click",()=>showView(button.dataset.view));
+  button.addEventListener("click",()=>{
+    showView(button.dataset.view);
+  });
 });
 
 document.querySelectorAll("[data-view-link]").forEach(link=>{
@@ -1386,14 +1490,13 @@ document.querySelectorAll('[data-social="tiktok"]').forEach(link=>{
 });
 
 /* INITIALIZE */
-document.getElementById("weeklyFlavorName").textContent=CONFIG.weeklyFlavorName;
-document.getElementById("weeklyDescription").textContent=CONFIG.weeklyFlavorDescription;
 document.getElementById("year").textContent=new Date().getFullYear();
 
 renderProductCards();
 renderCart();
 updateCartCount();
 updateAddressRequirement();
+
 </script>
 </body>
 </html>
